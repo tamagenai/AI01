@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 10;
+          background-color: mintcream;
+          width: 100%;
+          
+  
+        } 
+        .dataContent{
+          padding-top: 200px;
+          display: block;
+        }
+        
+        .clkBtn {
+          cursor: pointer;
+          user-select: none;
+        }
+        .speed {
+          margin: none;
+        }
+        
+      </style>
+</head>
+<body>
+    <div class="header">
+   
+      <h1>そうだったんだ！中国　単語帳</h1>
+      <div>
+      <label for="tts-select">合成言語：</label><select id="tts-select"><option data-lang="zh-CN" data-name="Google&nbsp;普通话（中国大陆）">Google&nbsp;普通话（中国大陆）</option></select>
+      </div>
+      <div class="divFlex">
+        <div class="sheetSelect">
+        
+          <label for="sheet-select">シート選択：</label><select id="sheet-select" name="sheetSelect"><option value="第1課単語">第1課単語</option><option value="第1課本文">第1課本文</option><option value="第２課単語">第２課単語</option><option value="第２課本文">第２課本文</option></select>
+        </div>
+        <div class="speed">
+        <label for="speech-Speed">　　音声スピード:</label>
+
+        <select name="speechSpeed" id="speech-Speed">
+            <option value="1.0">1.0</option>
+            <option value="0.9">0.9</option>
+            <option value="0.8">0.8</option>
+            <option value="0.7">0.7</option>
+            <option value="0.6">0.6</option>
+            <option value="0.5">0.5</option>
+            <option value="1.1">1.1</option>
+            <option value="1.2">1.2</option>
+            <option value="1.3">1.3</option>
+            <option value="1.4">1.4</option>
+            <option value="1.5">1.5</option>
+            <option value="1.6">1.6</option>
+            <option value="1.7">1.7</option>
+            <option value="1.8">1.8</option>
+            <option value="1.9">1.9</option>
+            <option value="2.0">2.0</option>
+            
+        </select>
+      </div>
+      
+    </div>
+    
+    </div>
+    
+        <div class="dataContent">
+    <table border="1">
+              
+      
+    
+      <tbody><tr>
+       
+        
+        
+        
+        <td>1連番</td>
+        <td onclick="speakData(this)" class="clkBtn">単語</td>
+         <td>単語ピンイン</td>
+          <td>単語日本語</td>
+          <td onclick="speakData(this)" class="clkBtn">例文</td>
+          <td>例文ピンイン</td>
+          <td>例文日本語</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>1</td>
+        <td onclick="speakData(this)" class="clkBtn">不久前</td>
+         <td>bùjiǔqián</td>
+          <td>少し前まで</td>
+          <td onclick="speakData(this)" class="clkBtn">不久  前 （不久  后）</td>
+          <td>bùjiǔ     qián   （ bùjiǔ     hòu ）</td>
+          <td>少し前（もうした間もなく）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>2</td>
+        <td onclick="speakData(this)" class="clkBtn">购买</td>
+         <td>gòumǎi</td>
+          <td>買う</td>
+          <td onclick="speakData(this)" class="clkBtn">游客  购买（主谓关系）/购买  电饭锅 （动宾关系）</td>
+          <td>yóukè     gòumǎi （ zhǔwèi guānxi ） / gòumǎi     diànfànguō   （ dòngbīn guānxi ）</td>
+          <td>訪問者は購入（メインと述語関係）/炊飯器を購入する（関係関係の移動）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>3</td>
+        <td onclick="speakData(this)" class="clkBtn">电饭锅</td>
+         <td>diànfànguō</td>
+          <td>炊飯器</td>
+          <td onclick="speakData(this)" class="clkBtn">好几台  电饭锅（定中关系）</td>
+          <td>hǎojǐ tái     diànfànguō （ dìngzhōng guānxi ）</td>
+          <td>いくつかの稲作（ディンゾン関係）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>4</td>
+        <td onclick="speakData(this)" class="clkBtn">套</td>
+         <td>tào</td>
+          <td>セット</td>
+          <td onclick="speakData(this)" class="clkBtn">十几  套（数量词） 高级化妆品  {定中关系}</td>
+          <td>shíjǐ     tào （ shùliàngcí ）   gāojí huàzhuāngpǐn     { dìngzhōng guānxi }</td>
+          <td>十数セットの高級化粧品</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>5</td>
+        <td onclick="speakData(this)" class="clkBtn">感慨</td>
+         <td>gǎnkǎi</td>
+          <td>心に深く感じる</td>
+          <td onclick="speakData(this)" class="clkBtn">感慨  中国经济飞速发展（动宾关系）</td>
+          <td>gǎnkǎi     zhōngguó jīngjì fēisùfāzhǎn （ dòngbīn guānxi ）</td>
+          <td>中国の経済が急速に発展していることを感慨深く思う</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>6</td>
+        <td onclick="speakData(this)" class="clkBtn">飞速</td>
+         <td>fēisù</td>
+          <td>急速</td>
+          <td onclick="speakData(this)" class="clkBtn">飞速  发展（状中关系）</td>
+          <td>fēisù     fāzhǎn （ zhuàngzhōng guānxi ）</td>
+          <td>急速に発展する（連用修飾語＋動詞）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>7</td>
+        <td onclick="speakData(this)" class="clkBtn">会</td>
+         <td>huì</td>
+          <td>～だろう</td>
+          <td onclick="speakData(this)" class="clkBtn">会  想（助动词+动词）</td>
+          <td>huì     xiǎng （ zhùdòngcí + dòngcí ）</td>
+          <td>思うだろう</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>8</td>
+        <td onclick="speakData(this)" class="clkBtn">其实</td>
+         <td>qíshí</td>
+          <td>実は</td>
+          <td onclick="speakData(this)" class="clkBtn">其+实</td>
+          <td>qí + shí</td>
+          <td>その　実</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>9</td>
+        <td onclick="speakData(this)" class="clkBtn">并（副词/连词）</td>
+         <td>bìng （ fùcí / liáncí ）</td>
+          <td>別に</td>
+          <td onclick="speakData(this)" class="clkBtn">并  不是</td>
+          <td>bìng     bùshì</td>
+          <td>決して　　ではない</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>10</td>
+        <td onclick="speakData(this)" class="clkBtn">不是  而是 （复句用连词）</td>
+         <td>bùshì     érshì   （ fùjù yòng liáncí ）</td>
+          <td>~ではなく・・・だ</td>
+          <td onclick="speakData(this)" class="clkBtn">不是自己用，而是送礼用</td>
+          <td>bùshì zìjǐ yòng ， érshì sònglǐ yòng</td>
+          <td>自分用ではなく、プレゼント用</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>11</td>
+        <td onclick="speakData(this)" class="clkBtn">亲友</td>
+         <td>qīnyǒu</td>
+          <td>親戚と友人</td>
+          <td onclick="speakData(this)" class="clkBtn">送给  亲友</td>
+          <td>sònggěi     qīnyǒu</td>
+          <td>親戚や友達に贈る</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>12</td>
+        <td onclick="speakData(this)" class="clkBtn">即便  如此</td>
+         <td>jíbiàn     rúcǐ</td>
+          <td>それにしても</td>
+          <td onclick="speakData(this)" class="clkBtn">＝即使  像这样</td>
+          <td>＝ jíshǐ     xiàng zhèyàng</td>
+          <td>それにしても</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>13</td>
+        <td onclick="speakData(this)" class="clkBtn">劳民  伤财（动宾关系的并列）</td>
+         <td>láomín     shāngcái （ dòngbīn guānxi de bìngliè ）</td>
+          <td>人力と財力を浪費する（「動詞＋目的語」構造の並列）</td>
+          <td onclick="speakData(this)" class="clkBtn">有点儿“劳民伤财”</td>
+          <td>yǒudiǎnr “ láomínshāngcái ”</td>
+          <td>ちょっと手間とお金をかけすぎる</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>14</td>
+        <td onclick="speakData(this)" class="clkBtn">不管  怎么说</td>
+         <td>bùguǎn     zěnme shuō</td>
+          <td>何と言っても</td>
+          <td onclick="speakData(this)" class="clkBtn">但  不管怎么说</td>
+          <td>dàn     bùguǎnzěnme shuō</td>
+          <td>しかし、何せ</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>15</td>
+        <td onclick="speakData(this)" class="clkBtn">仍然</td>
+         <td>réngrán</td>
+          <td>依然として</td>
+          <td onclick="speakData(this)" class="clkBtn">仍然  根深蒂固</td>
+          <td>réngrán     gēnshēndìgù</td>
+          <td>依然として根強く存在している</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>16</td>
+        <td onclick="speakData(this)" class="clkBtn">根深  蒂固（主谓关系的并列）</td>
+         <td>gēnshēn     dìgù （ zhǔwèi guānxi de bìngliè ）</td>
+          <td>根強い（「主述＋主述」の並列）</td>
+          <td onclick="speakData(this)" class="clkBtn">仍然  根深蒂固</td>
+          <td>réngrán     gēnshēndìgù</td>
+          <td>依然として根強く存在している</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>17</td>
+        <td onclick="speakData(this)" class="clkBtn">空  手（动宾关系：空着手）</td>
+         <td>kōng     shǒu （ dòngbīn guānxi ： kōng zhuóshǒu ）</td>
+          <td>手ぶら（動詞＋目的語）</td>
+          <td onclick="speakData(this)" class="clkBtn">空手  回来</td>
+          <td>kōngshǒu     huílai</td>
+          <td>手ぶらで帰ってくる</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>18</td>
+        <td onclick="speakData(this)" class="clkBtn">说  不  过去（动词+方向补语→可能补语的否定/肯定：说得过去）</td>
+         <td>shuō     bù     guòqu （ dòngcí + fāngxiàng bǔyǔ → kěnéng bǔyǔ de fǒudìng / kěndìng ： shuōdeguòqù ）</td>
+          <td>筋道が立たない</td>
+          <td onclick="speakData(this)" class="clkBtn">有点儿  说不过去</td>
+          <td>yǒudiǎnr     shuōbuguòqù</td>
+          <td>ちょっと筋道が立たない</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>19</td>
+        <td onclick="speakData(this)" class="clkBtn">另外</td>
+         <td>lìngwài</td>
+          <td>その他、一方</td>
+          <td onclick="speakData(this)" class="clkBtn">另外+（句子）</td>
+          <td>lìngwài + （ jùzi ）</td>
+          <td>一方、～～</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>20</td>
+        <td onclick="speakData(this)" class="clkBtn">代购（代理购买）</td>
+         <td>dàigòu （ dàilǐ gòumǎi ）</td>
+          <td>代理で購入する</td>
+          <td onclick="speakData(this)" class="clkBtn">代购  推动了</td>
+          <td>dàigòu     tuīdòng le</td>
+          <td>「代理購入」が～～　拍車をかけた</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>21</td>
+        <td onclick="speakData(this)" class="clkBtn">推动</td>
+         <td>tuīdòng</td>
+          <td>推し進める、拍車をかける</td>
+          <td onclick="speakData(this)" class="clkBtn">推动了  爆买（动词+宾语）</td>
+          <td>tuīdòng le     bàomǎi （ dòngcí + bīnyǔ ）</td>
+          <td>爆買いに拍車をかけた</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>22</td>
+        <td onclick="speakData(this)" class="clkBtn">由于（连词＝因为）</td>
+         <td>yóuyú （ liáncí ＝ yīnwèi ）</td>
+          <td>～のため</td>
+          <td onclick="speakData(this)" class="clkBtn">由于+句子（日本商品质量安心，价格合理）</td>
+          <td>yóuyú + jùzi （ rìběn shāngpǐnzhìliàng ānxīn ， jiàgéhélǐ ）</td>
+          <td>日本の商品は品質が安心できて、値段もリーズナブルのため</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>23</td>
+        <td onclick="speakData(this)" class="clkBtn">愿意</td>
+         <td>yuànyì</td>
+          <td>したいと思う、したがる</td>
+          <td onclick="speakData(this)" class="clkBtn">愿意  购买</td>
+          <td>yuànyì     gòumǎi</td>
+          <td>購入したがる</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>24</td>
+        <td onclick="speakData(this)" class="clkBtn">奶粉</td>
+         <td>nǎifěn</td>
+          <td>粉ミルク</td>
+          <td onclick="speakData(this)" class="clkBtn">奶粉  和  纸尿布</td>
+          <td>nǎifěn     hé     zhǐ niàobù</td>
+          <td>ミルクパウダーとおむつ</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>25</td>
+        <td onclick="speakData(this)" class="clkBtn">纸  尿布</td>
+         <td>zhǐ     niàobù</td>
+          <td>紙おむつ</td>
+          <td onclick="speakData(this)" class="clkBtn">奶粉  和  纸尿布</td>
+          <td>nǎifěn     hé     zhǐ niàobù</td>
+          <td>粉ミルクと紙おむつ</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>26</td>
+        <td onclick="speakData(this)" class="clkBtn">婴儿</td>
+         <td>yīngér</td>
+          <td>赤ちゃん</td>
+          <td onclick="speakData(this)" class="clkBtn">婴儿  商品 （定中关系）</td>
+          <td>yīngér     shāngpǐn   （ dìngzhōng guānxi ）</td>
+          <td>幼児商品（連体修飾語＋中心語）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>27</td>
+        <td onclick="speakData(this)" class="clkBtn">尤其</td>
+         <td>yóuqí</td>
+          <td>特に</td>
+          <td onclick="speakData(this)" class="clkBtn">尤其  受欢迎</td>
+          <td>yóuqí     shòuhuānyíng</td>
+          <td>特に人気があります</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>28</td>
+        <td onclick="speakData(this)" class="clkBtn">因此（＝因为这个）</td>
+         <td>yīncǐ （ ＝ yīnwèi zhège ）</td>
+          <td>だから（=このため）</td>
+          <td onclick="speakData(this)" class="clkBtn">因此+结果句子（委托代购的情况非常多）</td>
+          <td>yīncǐ + jiéguǒ jùzi （ wěituō dàigòu de qíngkuàng fēicháng duō ）</td>
+          <td>それゆえに、代理購入の依頼が非常に多く</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>29</td>
+        <td onclick="speakData(this)" class="clkBtn">并（连词）</td>
+         <td>bìng （ liáncí ）</td>
+          <td>その上、そして</td>
+          <td onclick="speakData(this)" class="clkBtn">并+句子（形成了一种商业模式）</td>
+          <td>bìng + jùzi （ xíngchéng le yīzhǒng shāngyèmóshì ）</td>
+          <td>そして、1つのビジネスモデルにもなっていました</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>30</td>
+        <td onclick="speakData(this)" class="clkBtn">形成</td>
+         <td>xíngchéng</td>
+          <td>生成する、できあがる</td>
+          <td onclick="speakData(this)" class="clkBtn">形成了  模式（动词+宾语）</td>
+          <td>xíngchéng le     móshì （ dòngcí + bīnyǔ ）</td>
+          <td>モデルにできあがった</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>31</td>
+        <td onclick="speakData(this)" class="clkBtn">商业  模式（定中关系）</td>
+         <td>shāngyè     móshì （ dìngzhōng guānxi ）</td>
+          <td>ビジネスモデル（連体修飾語＋中心語）</td>
+          <td onclick="speakData(this)" class="clkBtn">一种  商业模式</td>
+          <td>yīzhǒng     shāngyèmóshì</td>
+          <td>１つのビジネスモデル</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>32</td>
+        <td onclick="speakData(this)" class="clkBtn">据</td>
+         <td>jù</td>
+          <td>~によると</td>
+          <td onclick="speakData(this)" class="clkBtn">据  统计</td>
+          <td>jù     tǒngjì</td>
+          <td>統計によると</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>33</td>
+        <td onclick="speakData(this)" class="clkBtn">有些（＝有一些）（副词）</td>
+         <td>yǒuxiē （ ＝ yǒu yīxiē ） （ fùcí ）</td>
+          <td>少し、いささか</td>
+          <td onclick="speakData(this)" class="clkBtn">有些  缓和</td>
+          <td>yǒuxiē     huǎnhé</td>
+          <td>ちょっと落ち着いてきて</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>2</td>
+        <td onclick="speakData(this)" class="clkBtn">购买</td>
+         <td>gòumǎi</td>
+          <td>買う</td>
+          <td onclick="speakData(this)" class="clkBtn">游客  购买（主谓关系）/购买  电饭锅（动宾关系）</td>
+          <td>yóukè     gòumǎi （ zhǔwèi guānxi ） / gòumǎi     diànfànguō （ dòngbīn guānxi ）</td>
+          <td>訂正：観光客が購入する（主語＋述語）/電気炊飯器を購入する（動詞＋目的語）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>3</td>
+        <td onclick="speakData(this)" class="clkBtn">电  饭锅（定中关系）</td>
+         <td>diàn     fànguō （ dìngzhōng guānxi ）</td>
+          <td>電子炊飯器（連体修飾語＋中心語）</td>
+          <td onclick="speakData(this)" class="clkBtn">好几台  电饭锅（数词+量词+名词）</td>
+          <td>hǎojǐ tái     diànfànguō （ shùcí + liàngcí + míngcí ）</td>
+          <td>訂正：何台もの電子炊飯器</td>
+          
+      </tr>
+              </tbody></table>
+    </div>
+          <div class="dataContent dataNone">
+    <table border="1">
+              
+      
+    
+      <tbody><tr>
+       
+        
+        
+        
+        <td>1連番</td>
+        <td onclick="speakData(this)" class="clkBtn">単語</td>
+         <td>単語ピンイン</td>
+          <td>単語日本語</td>
+          <td onclick="speakData(this)" class="clkBtn">例文</td>
+          <td>例文ピンイン</td>
+          <td>例文日本語</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第1段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì yī jù</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">不久前，电视上经常出现中国游客一次购买好几台电饭锅或十几套高级化妆品的情景。 </td>
+          <td>bùjiǔqián ， diànshì shàng jīngchángchūxiàn zhōngguó yóukè yīcì gòumǎi hǎojǐ tái diànfànguō huò shíjǐtào gāojí huàzhuāngpǐn de qíngjǐng 。</td>
+          <td>少し前、テレビには、中国人観光客が、一度に何台もの電気炊飯器や、10数セットの高級化粧品を購入する情景がよく映っていましたね（見られた）。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第１段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì èr jù</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">在感慨中国经济飞速发展的同时，大家也一定会想，中国人为什么这么爱买东西呢？</td>
+          <td>zài gǎnkǎi zhōngguó jīngjì fēisùfāzhǎn de tóngshí ， dàjiā yě yīdìng huìxiǎng ， zhōngguó rén wèishénme zhème àimǎi dōngxi ne ？</td>
+          <td>中国の経済が急速に発展していることを感慨深く思うのと同時に、皆さんはこうも考えている筈だ。どうして中国人はこんなに買い物が好きなのかとも皆も思うのではないでしょうか。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì yī jù</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">其实，中国人爆买的东西中，很多并不是自己用，而是送礼用的。</td>
+          <td>qíshí ， zhōngguó rén bàomǎi de dōngxi zhōng ， hěnduō bìng bùshì zìjǐ yòng ， érshì sònglǐ yòng de 。</td>
+          <td>実は、中国人が爆買いした物の中には、自分用ではなく、プレゼント用のものが たくさんあります。 </td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì èr jù</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">中国人一次买好几台 电饭锅，当然不可能都是自己用，大概还有送给亲友的吧。</td>
+          <td>zhōngguó rén yīcì mǎihǎo jǐtái   diànfànguō ， dāngrán bù kěnéng dū shì zìjǐ yòng ， dàgài háiyǒu sònggěi qīnyǒu de bā 。</td>
+          <td>中国人は一度に電気炊飯器を何個も買うのは、当然全部自分用 のはずがなく、親戚や友達に贈るものもあるでしょう。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì sān jù</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">我想这样的文化背景是引起爆买的原因之一。</td>
+          <td>wǒ xiǎng zhèyàng de wénhuàbèijǐng shì yǐnqǐ bàomǎi de yuányīn zhīyī 。</td>
+          <td>このような文化背景が爆買 いを引き起こす原因の一つだと思います。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì yī jù</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">大家可能还会想：即便如此，中国人送礼是不是有点儿“劳民伤财”？</td>
+          <td>dàjiā kěnéng huánhuì xiǎng ： jíbiànrúcǐ ， zhōngguó rén sònglǐ shìbùshì yǒudiǎnr “ láomínshāngcái ” ？</td>
+          <td>それにしても、プレゼントを贈るのに中国人はちょっと手間とお金をかけすぎる のではと思うかもしれませんね。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì èr jù</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">在这一点上，我也有同感。</td>
+          <td>zài zhè yīdiǎn shàng ， wǒ yě yǒu tónggǎn 。</td>
+          <td>この点においては、私も同感です。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì sān jù</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">但不管怎么说，“面子文化”在中国仍然根深蒂固。</td>
+          <td>dàn bùguǎnzěnme shuō ， “ miànzi wénhuà ” zài zhōngguó réngrán gēnshēndìgù 。</td>
+          <td>しかし、何せ 中国では 「メンツの文化」 が依然として根強く存在しているので、</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第4句</td>
+         <td>dì 4 jù</td>
+          <td>文4</td>
+          <td onclick="speakData(this)" class="clkBtn">去国外旅游后空手回来，或只是买一盒点心大家分着吃，还是有点儿说不过去。</td>
+          <td>qù guówài lǚyóu hòu kōngshǒu huílai ， huò zhǐshì mǎi yīhé diǎnxin dàjiā fēnzhe chī ， háishi yǒudiǎnr shuōbuguòqù 。</td>
+          <td>海外旅行から手 ぶらで帰ってくる、もしくはお菓子を1箱だけ買ってきてみんなで分けて食べるの は、やはり筋道が立ちません。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì yī jù</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">另外，“代购”也大大推动了爆买。</td>
+          <td>lìngwài ， “ dàigòu ” yě dàdà tuīdòng le bàomǎi 。</td>
+          <td>一方、「代理購入」も大きく爆買いに拍車をかけました。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì èr jù</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">由于日本商品质量安心，价格合理，很多中国人都愿意购买日本商品。</td>
+          <td>yóuyú rìběn shāngpǐnzhìliàng ānxīn ， jiàgéhélǐ ， hěnduō zhōngguó rén dū yuànyì gòumǎi rìběn shāngpǐn 。</td>
+          <td>日本の商品は品質が安心 できて、値段もリーズナブルのため、日本商品を購入したがる中国人がたくさんいます。 </td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì sān jù</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">其中，奶粉和纸尿布等婴儿商品尤其受欢迎。</td>
+          <td>qízhōng ， nǎifěn hé zhǐ niàobù děng yīngér shāngpǐn yóuqí shòuhuānyíng 。</td>
+          <td>粉ミルクや紙おむつなどの幼児用品が特に人気があります。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第4句</td>
+         <td>dì 4 jù</td>
+          <td>文4</td>
+          <td onclick="speakData(this)" class="clkBtn">因此，委托代购的情况非常多，并形成了一种商业模式。</td>
+          <td>yīncǐ ， wěituō dàigòu de qíngkuàng fēicháng duō ， bìng xíngchéng le yīzhǒng shāngyèmóshì 。</td>
+          <td>それゆえに、 代 理購入の依頼が非常に多く、 1つのビジネスモデルにもなっていました。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第5段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì yī jù</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">不过，据统计，近几年中国游客的爆买现象有些缓和，代购的人也少了。</td>
+          <td>bùguò ， jùtǒngjì ， jìnjǐnián zhōngguó yóukè de bàomǎi xiànxiàng yǒuxiē huǎnhé ， dàigòu de rén yě shǎo le 。</td>
+          <td>ところが、統計によると、 ここ数年の中国人観光客による爆買いがちょっと落ち 着いてきていて、 代理購入の人も少なくなってきています。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第5段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì èr jù</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">这是为什么呢？</td>
+          <td>zhèshì wèishénme ne ？</td>
+          <td>それはなぜでしょう。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第5段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì sān jù</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">请大家想一想。</td>
+          <td>qǐng dàjiā xiǎngyīxiǎng 。</td>
+          <td> みなさん、考えてみてください。</td>
+          
+      </tr>
+              </tbody></table>
+    </div>
+          <div class="dataContent dataNone">
+    <table border="1">
+              
+      
+    
+      <tbody><tr>
+       
+        
+        
+        
+        <td>1連番</td>
+        <td onclick="speakData(this)" class="clkBtn">単語</td>
+         <td>単語ピンイン</td>
+          <td>単語日本語</td>
+          <td onclick="speakData(this)" class="clkBtn">例文</td>
+          <td>例文ピンイン</td>
+          <td>例文日本語</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>1</td>
+        <td onclick="speakData(this)" class="clkBtn">各付各的</td>
+         <td>gèfù gè de</td>
+          <td>別々に支払う</td>
+          <td onclick="speakData(this)" class="clkBtn">是  各付各的</td>
+          <td>shì     gèfù gè de</td>
+          <td>それぞれ自分の分を支払うことです</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>2</td>
+        <td onclick="speakData(this)" class="clkBtn">或者</td>
+         <td>huòzhě</td>
+          <td>あるいは</td>
+          <td onclick="speakData(this)" class="clkBtn">或者  平均分摊</td>
+          <td>huòzhě     píngjūn fēntān</td>
+          <td>或いは割り勘します</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>3</td>
+        <td onclick="speakData(this)" class="clkBtn">分摊</td>
+         <td>fēntān</td>
+          <td>（費用を）分担する</td>
+          <td onclick="speakData(this)" class="clkBtn">平均  分摊</td>
+          <td>píngjūn     fēntān</td>
+          <td>均しく分ける</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>4</td>
+        <td onclick="speakData(this)" class="clkBtn">许多</td>
+         <td>xǔduō</td>
+          <td>たくさん</td>
+          <td onclick="speakData(this)" class="clkBtn">许多  中国人</td>
+          <td>xǔduō     zhōngguó rén</td>
+          <td>多くの中国人</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>5</td>
+        <td onclick="speakData(this)" class="clkBtn">觉得</td>
+         <td>juéde</td>
+          <td>～と感じる、～と思う</td>
+          <td onclick="speakData(this)" class="clkBtn">中国人  觉得</td>
+          <td>zhōngguó rén     juéde</td>
+          <td>中国人は～思う</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>6</td>
+        <td onclick="speakData(this)" class="clkBtn">显得</td>
+         <td>xiǎnde</td>
+          <td>～のように見える、～が目立つ</td>
+          <td onclick="speakData(this)" class="clkBtn">显得  有些“小气”</td>
+          <td>xiǎnde     yǒuxiē “ xiǎoqì ”</td>
+          <td>ちょっとけち臭いと見える</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>7</td>
+        <td onclick="speakData(this)" class="clkBtn">小气</td>
+         <td>xiǎoqì</td>
+          <td>けち臭い</td>
+          <td onclick="speakData(this)" class="clkBtn">有些  小气</td>
+          <td>yǒuxiē     xiǎoqì</td>
+          <td>ちょっとけち臭い</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>9</td>
+        <td onclick="speakData(this)" class="clkBtn">既然</td>
+         <td>jìrán</td>
+          <td>～である以上、～したからには、～なら</td>
+          <td onclick="speakData(this)" class="clkBtn">既然  是朋友</td>
+          <td>jìrán     shì péngyou</td>
+          <td>友達同士なのだから</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>9</td>
+        <td onclick="speakData(this)" class="clkBtn">细</td>
+         <td>xì</td>
+          <td>細かい</td>
+          <td onclick="speakData(this)" class="clkBtn">这么  细</td>
+          <td>zhème     xì</td>
+          <td>こんなに細かく</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>10</td>
+        <td onclick="speakData(this)" class="clkBtn">聚餐</td>
+         <td>jùcān</td>
+          <td>会食する</td>
+          <td onclick="speakData(this)" class="clkBtn">朋友  聚餐</td>
+          <td>péngyou     jùcān</td>
+          <td>友達が集まって食事する</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>11</td>
+        <td onclick="speakData(this)" class="clkBtn">由 （     ）     来</td>
+         <td>yóu   （           ）           lái</td>
+          <td>～よって…する（動作主を導く）</td>
+          <td onclick="speakData(this)" class="clkBtn">由（一个人）  来  买单</td>
+          <td>yóu （ yīgè rén ）     lái     mǎidān</td>
+          <td>（一人で）まとめて勘定する</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>12</td>
+        <td onclick="speakData(this)" class="clkBtn">买单</td>
+         <td>mǎidān</td>
+          <td>勘定を払う</td>
+          <td onclick="speakData(this)" class="clkBtn">来  买单</td>
+          <td>lái     mǎidān</td>
+          <td>（進んで）勘定する</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>13</td>
+        <td onclick="speakData(this)" class="clkBtn">的话</td>
+         <td>dehuà</td>
+          <td>～ということなら</td>
+          <td onclick="speakData(this)" class="clkBtn">这样  的话</td>
+          <td>zhèyàng     dehuà</td>
+          <td>このようなことになると</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>14</td>
+        <td onclick="speakData(this)" class="clkBtn">的确</td>
+         <td>díquè</td>
+          <td>確かに</td>
+          <td onclick="speakData(this)" class="clkBtn">的确+句子</td>
+          <td>díquè + jùzi</td>
+          <td>確かに+文</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>15</td>
+        <td onclick="speakData(this)" class="clkBtn">特别</td>
+         <td>tèbié</td>
+          <td>とりわけ、特に</td>
+          <td onclick="speakData(this)" class="clkBtn">特别  是</td>
+          <td>tèbié     shì</td>
+          <td>特には</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>16</td>
+        <td onclick="speakData(this)" class="clkBtn">请客</td>
+         <td>qǐngkè</td>
+          <td>奢る、ご馳走する</td>
+          <td onclick="speakData(this)" class="clkBtn">请客的人</td>
+          <td>qǐngkè de rén</td>
+          <td>奢る人</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>17</td>
+        <td onclick="speakData(this)" class="clkBtn">尽管如此</td>
+         <td>jìnguǎnrúcǐ</td>
+          <td>それにもかかわらず、それなのに</td>
+          <td onclick="speakData(this)" class="clkBtn">尽管+如此</td>
+          <td>jǐnguǎn + rúcǐ</td>
+          <td>+にもかかわらず</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>18</td>
+        <td onclick="speakData(this)" class="clkBtn">分开</td>
+         <td>fēnkāi</td>
+          <td>分ける、別々にする</td>
+          <td onclick="speakData(this)" class="clkBtn">分开  付账</td>
+          <td>fēnkāi     fùzhàng</td>
+          <td>別々で支払う</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>19</td>
+        <td onclick="speakData(this)" class="clkBtn">付账</td>
+         <td>fùzhàng</td>
+          <td>支払う、勘定を払う</td>
+          <td onclick="speakData(this)" class="clkBtn">分开  付账</td>
+          <td>fēnkāi     fùzhàng</td>
+          <td>別々で支払う</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>20</td>
+        <td onclick="speakData(this)" class="clkBtn">认为</td>
+         <td>rènwéi</td>
+          <td>～と考える、～と思う</td>
+          <td onclick="speakData(this)" class="clkBtn">我  认为</td>
+          <td>wǒ     rènwéi</td>
+          <td>私が思うに</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>21</td>
+        <td onclick="speakData(this)" class="clkBtn">爱面子</td>
+         <td>àimiànzi</td>
+          <td>体裁にこだわる、メンツを重んじる</td>
+          <td onclick="speakData(this)" class="clkBtn">中国人  爱面子</td>
+          <td>zhōngguó rén     àimiànzi</td>
+          <td>中国人は　メンツを重んじる</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>22</td>
+        <td onclick="speakData(this)" class="clkBtn">讲排场</td>
+         <td>jiǎngpáichǎng</td>
+          <td>見栄を張る、派手好だ</td>
+          <td onclick="speakData(this)" class="clkBtn">中国人  讲排场</td>
+          <td>zhōngguó rén     jiǎngpáichǎng</td>
+          <td>中国人は　見栄を張る</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>23</td>
+        <td onclick="speakData(this)" class="clkBtn">而</td>
+         <td>ér</td>
+          <td>ところが、一方（逆接を表す）</td>
+          <td onclick="speakData(this)" class="clkBtn">而+句子</td>
+          <td>ér + jùzi</td>
+          <td>逆に～＋文</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>24</td>
+        <td onclick="speakData(this)" class="clkBtn">凑钱</td>
+         <td>còuqián</td>
+          <td>お金を集める、お金を出し合う</td>
+          <td onclick="speakData(this)" class="clkBtn">大家  凑钱</td>
+          <td>dàjiā     còuqián</td>
+          <td>皆でお金を出し合って</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>25</td>
+        <td onclick="speakData(this)" class="clkBtn">萧条</td>
+         <td>xiāotiáo</td>
+          <td>不景気だ、不況だ</td>
+          <td onclick="speakData(this)" class="clkBtn">贫困  萧条</td>
+          <td>pínkùn     xiāotiáo</td>
+          <td>貧乏くさく、不景気</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>26</td>
+        <td onclick="speakData(this)" class="clkBtn">清楚</td>
+         <td>qīngchu</td>
+          <td>はっきりしている</td>
+          <td onclick="speakData(this)" class="clkBtn">分得  （太）清楚</td>
+          <td>fēn dé     （ tài ） qīngchu</td>
+          <td>はっきり分ける</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>27</td>
+        <td onclick="speakData(this)" class="clkBtn">当场</td>
+         <td>dāngchǎng</td>
+          <td>その場で</td>
+          <td onclick="speakData(this)" class="clkBtn">当场  清算</td>
+          <td>dāngchǎng     qīngsuàn</td>
+          <td>その場で清算する</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>28</td>
+        <td onclick="speakData(this)" class="clkBtn">伤害</td>
+         <td>shānghài</td>
+          <td>傷つける、害する</td>
+          <td onclick="speakData(this)" class="clkBtn">伤害  感情</td>
+          <td>shānghài     gǎnqíng</td>
+          <td>友情に傷つける</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>29</td>
+        <td onclick="speakData(this)" class="clkBtn">相反</td>
+         <td>xiāngfǎn</td>
+          <td>逆に、一方、それに対して</td>
+          <td onclick="speakData(this)" class="clkBtn">与（以上两点）相反</td>
+          <td>yǔ （ yǐshàng liǎngdiǎn ） xiāngfǎn</td>
+          <td>（上記の二つのこと）と逆に</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>30</td>
+        <td onclick="speakData(this)" class="clkBtn">显示</td>
+         <td>xiǎnshì</td>
+          <td>ひけらかす、浮かび出る</td>
+          <td onclick="speakData(this)" class="clkBtn">显示  自己</td>
+          <td>xiǎnshì     zìjǐ</td>
+          <td>自分を目立たせる</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>31</td>
+        <td onclick="speakData(this)" class="clkBtn">破费</td>
+         <td>pòfèi</td>
+          <td>お金を使う、散財する</td>
+          <td onclick="speakData(this)" class="clkBtn">（让）别人  破费</td>
+          <td>（ ràng ） biéren     pòfèi</td>
+          <td>人にお金を使わせる</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>32</td>
+        <td onclick="speakData(this)" class="clkBtn">过意不去（可能补语否定）</td>
+         <td>guòyìbùqù （ kěnéng bǔyǔ fǒudìng ）</td>
+          <td>すまなく思う、恐縮に思う</td>
+          <td onclick="speakData(this)" class="clkBtn">觉得  过意不去</td>
+          <td>juéde     guòyìbùqù</td>
+          <td>申し訳なく思う</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>33</td>
+        <td onclick="speakData(this)" class="clkBtn">欠人情</td>
+         <td>qiàn rénqíng</td>
+          <td>借りを作る</td>
+          <td onclick="speakData(this)" class="clkBtn">（不）愿意  欠人情</td>
+          <td>（ bù ） yuànyì     qiàn rénqíng</td>
+          <td>借りを作ることをしたい（したくない）</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>34</td>
+        <td onclick="speakData(this)" class="clkBtn">至于</td>
+         <td>zhìyú</td>
+          <td>～に至っては、～はというと</td>
+          <td onclick="speakData(this)" class="clkBtn">至于+句子</td>
+          <td>zhìyú + jùzi</td>
+          <td>+文について</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>35</td>
+        <td onclick="speakData(this)" class="clkBtn">视（   ）而定</td>
+         <td>shì （       ） érdìng</td>
+          <td>～によって決まる、～次第</td>
+          <td onclick="speakData(this)" class="clkBtn">视（ 情况  ）而定</td>
+          <td>shì （   qíngkuàng     ） érdìng</td>
+          <td>（状況）による</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>36</td>
+        <td onclick="speakData(this)" class="clkBtn">轮流</td>
+         <td>lúnliú</td>
+          <td>順番に</td>
+          <td onclick="speakData(this)" class="clkBtn">轮流  请客</td>
+          <td>lúnliú     qǐngkè</td>
+          <td>順番に奢る</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>37</td>
+        <td onclick="speakData(this)" class="clkBtn">总的来看</td>
+         <td>zǒngdeláikàn</td>
+          <td>総体的に見れば</td>
+          <td onclick="speakData(this)" class="clkBtn">总的+来看</td>
+          <td>zǒng de + láikàn</td>
+          <td>総体的に見れば</td>
+          
+      </tr>
+              </tbody></table>
+    </div>
+          <div class="dataContent dataNone">
+    <table border="1">
+              
+      
+    
+      <tbody><tr>
+       
+        
+        
+        
+        <td>1連番</td>
+        <td onclick="speakData(this)" class="clkBtn">単語</td>
+         <td>単語ピンイン</td>
+          <td>単語日本語</td>
+          <td onclick="speakData(this)" class="clkBtn">例文</td>
+          <td>例文ピンイン</td>
+          <td>例文日本語</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第1段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì yī duàn</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">在日本，朋友们在外面一起吃饭的时候，大多数情况是各付各的，或者平均分摊。</td>
+          <td>zài rìběn ， péngyou men zài wàimiàn yīqǐ chīfàn de shíhou ， dàduōshù qíngkuàng shì gèfù gè de ， huòzhě píngjūn fēntān 。</td>
+          <td>日本では、友人同士が外で一緒に食事をする時、ほとんどの場合は別々に払うか、 みんなで割り勘をします。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第1段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì yī duàn</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">可许多中国人觉得，这样显得有些“小气”。</td>
+          <td>kě xǔduō zhōngguó rén juéde ， zhèyàng xiǎnde yǒuxiē “ xiǎoqì ” 。</td>
+          <td>しかし、このようなやり方はちょっと「ケチくさい」と 思う中国人が多くいます。 </td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第1段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì yī duàn</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">既然是朋友，一起出来吃饭，为什么要分得这么细呢？</td>
+          <td>jìrán shì péngyou ， yīqǐ chūlái chīfàn ， wèishénme yào fēndé zhème xì ne ？</td>
+          <td>友達同士なのだから、 一緒に外で食事をするくらいで、 どうしてこんなに細かく分けるのだろうと (中国人は思います)。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì èr duàn</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">在中国，朋友聚餐时，由一个人来买单的情况比较普遍。</td>
+          <td>zài zhōngguó ， péngyou jùcān shí ， yóu yīgè rénlái mǎidān de qíngkuàng bǐjiào pǔbiàn 。</td>
+          <td>中国では、 友人が集まって食事をする時、 1人でまとめて勘定するのがわりと一般 的です。 </td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì èr duàn</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">你一定会想：这样的话，负担太重了，谁愿意买单呢？</td>
+          <td>nǐ yīdìng huìxiǎng ： zhèyàngdehuà ， fùdān tàizhòng le ， shéi yuànyì mǎidān ne ？</td>
+          <td>「それじゃ負担が重すぎて誰が払いたがるのだろう」と思うでしょう。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì èr duàn</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">的确，特别是人数多的时候，请客的人要付很多钱。</td>
+          <td>díquè ， tèbié shì rénshù duō de shíhou ， qǐngkè de rén yàofù hěnduō qián 。</td>
+          <td>確かに、特に人数が多い時は、おごる人はたくさん払わなければなりません。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第4句</td>
+         <td>dì èr duàn</td>
+          <td>文4</td>
+          <td onclick="speakData(this)" class="clkBtn">但尽管如此，许多中国人也不愿意分开付账。</td>
+          <td>dàn jìnguǎnrúcǐ ， xǔduō zhōngguó rén yě bù yuànyì fēnkāi fùzhàng 。</td>
+          <td>しかし，それでも、割り勘をしたがらない中国人が多いです。 </td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第2段</td>
+        <td onclick="speakData(this)" class="clkBtn">第5句</td>
+         <td>dì èr duàn</td>
+          <td>文５</td>
+          <td onclick="speakData(this)" class="clkBtn">这是为什么呢？</td>
+          <td>zhèshì wèishénme ne ？</td>
+          <td>それはなぜでしょう。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì sān duàn</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">我认为，主要有两个原因。</td>
+          <td>wǒ rènwéi ， zhǔyào yǒu liǎnggè yuányīn 。</td>
+          <td>私が思うには、主に2つの理由があります。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì sān duàn</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">第一，不少中国人爱面子，讲排场。</td>
+          <td>dìyī ， bùshǎo zhōngguó rén àimiànzi ， jiǎngpáichǎng 。</td>
+          <td>1つめは、メンツを重んじて、 見栄を 張りたがる中国人が多くいることです。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì sān duàn</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">他们觉得，请客显得生活富裕，景气良好；而大家“凑钱”付账，就有些贫困萧条的感觉。</td>
+          <td>tāmen juéde ， qǐngkè xiǎnde shēnghuófùyù ， jǐngqì liánghǎo ； ér dàjiā “ còuqián ” fùzhàng ， jiù yǒuxiē pínkùn xiāotiáo de gǎnjué 。</td>
+          <td>彼らはおごることが、 生活が裕福で、景気 が良いということの現れだと考えています。 逆にみんなでお金を出し合って支払う のはいささか貧乏くさく、不景気な感じがします。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第4句</td>
+         <td>dì sān duàn</td>
+          <td>文4</td>
+          <td onclick="speakData(this)" class="clkBtn">第二，很多中国人觉得，朋友之间不需要分得太清楚，当场清算会伤害感情。</td>
+          <td>dìèr ， hěnduō zhōngguó rén juéde ， péngyou zhījiān bù xūyào fēndé tài qīngchu ， dāngchǎng qīngsuàn huì shānghài gǎnqíng 。</td>
+          <td>2つめは、友人の間でははっきり分ける必要はなく、その場で清算するのは友情に傷つけるのだと考える中国人が 多くいることです。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第5句</td>
+         <td>dì sān duàn</td>
+          <td>文５</td>
+          <td onclick="speakData(this)" class="clkBtn">与以上两点相反，大多日本人不愿意显示自己。</td>
+          <td>yǔ yǐshàng liǎngdiǎn xiāngfǎn ， dàduō rìběn rén bù yuànyì xiǎnshì zìjǐ 。</td>
+          <td>以上の2つのことと逆に、 多くの日本人は目立ちたがりません。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第3段</td>
+        <td onclick="speakData(this)" class="clkBtn">第6句</td>
+         <td>dì sān duàn</td>
+          <td>文6</td>
+          <td onclick="speakData(this)" class="clkBtn">同时，让别人破费会觉得过意不去，也不愿意欠人情，所以日本人更愿意分开付账。</td>
+          <td>tóngshí ， ràng biéren pòfèi huì juéde guòyìbùqù ， yě bù yuànyì qiàn rénqíng ， suǒyǐ rìběn rén gēng yuànyì fēnkāi fùzhàng 。</td>
+          <td>また、人にお金を使わせるのは申し訳なく思うし、 借りを作ることもしたくないため、割り勘の方が良いと考えます。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第1句</td>
+         <td>dì 4 duàn</td>
+          <td>文1</td>
+          <td onclick="speakData(this)" class="clkBtn">那么，至于由谁来买单，要视情况而定。</td>
+          <td>nàme ， zhìyú yóushéilái mǎidān ， yàoshì qíngkuàng érdìng 。</td>
+          <td>さて、誰がお勘定をするのかというと、これは状況によりますが、</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第2句</td>
+         <td>dì 4 duàn</td>
+          <td>文2</td>
+          <td onclick="speakData(this)" class="clkBtn">不过，基本上是轮流请客。</td>
+          <td>bùguò ， jīběnshang shì lúnliú qǐngkè 。</td>
+          <td>順番におごる のが基本です。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第3句</td>
+         <td>dì 4 duàn</td>
+          <td>文3</td>
+          <td onclick="speakData(this)" class="clkBtn">所以总的来看，也是比较公平的。</td>
+          <td>suǒyǐ zǒngdeláikàn ， yě shì bǐjiào gōngpíng de 。</td>
+          <td>なので、総体的に見れば、この方式もわりと公平的です。</td>
+          
+      </tr>
+                  
+      
+    
+      <tr>
+       
+        
+        
+        
+        <td>第4段</td>
+        <td onclick="speakData(this)" class="clkBtn">第4句</td>
+         <td>dì 4 duàn</td>
+          <td>文4</td>
+          <td onclick="speakData(this)" class="clkBtn">你觉得哪种方式更好呢？</td>
+          <td>nǐ juéde nǎ zhǒng fāngshì gēnghǎo ne ？</td>
+          <td>あなたは どの方式がいいと思いますか。</td>
+          
+      </tr>
+              </tbody></table>
+    </div>
+          
+ 
+  <script>
+    iniCSSSet();
+    var voiceSelect = document.querySelector('#tts-select');
+    var voices = speechSynthesis.getVoices();
+    var osAndroid = false;
+    var ua = window.navigator.userAgent.toLocaleLowerCase();
+    if (ua.indexOf("android") !== -1  || ua.indexOf("ipad") !== -1 || ua.indexOf("iphone") !== -1) {
+      osAndroid = true;
+      console.log(ua);
+      console.log(ua.indexOf("android"));
+    } 
+    
+    
+
+    
+    
+    
+    let select = document.querySelector('[name="sheetSelect"]');
+
+    select.onchange = event => { 
+      var selIndex = select.selectedIndex;
+      console.log(select.selectedIndex);
+      var classElement = document.getElementsByClassName('dataContent');
+      for (let i = 0; i < classElement.length; i++) {
+        if (selIndex === i) {
+      
+          classElement[i].classList.remove("dataNone");
+        } else {
+          classElement[i].classList.add("dataNone");
+
+         }
+      
+      }
+    }
+    
+
+    
+    function fetchVoices(cb) {
+      if (!voices || !voices.length) {
+        setTimeout(function () {
+          voices = speechSynthesis.getVoices();
+          fetchVoices(cb);
+        }, 0);
+      }
+      else {
+        cb(voices);
+      }
+    }
+
+    function drawButtons(voices) {
+      for (i = 0; i < voices.length; i++) {
+        if (!osAndroid) {
+
+          if (voices[i].lang != 'zh-CN') {
+            continue;
+          }
+          var option = document.createElement('option');
+          option.textContent = voices[i].name;
+          option.setAttribute('data-lang', voices[i].lang);
+          option.setAttribute('data-name', voices[i].name);
+          voiceSelect.appendChild(option);
+          console.log(option);
+        }
+
+      }
+
+    }
+
+    function speakData(param1, param2) {
+
+      if (param1 instanceof HTMLTableCellElement) {
+        const td = param1;
+
+        
+        const synth = window.speechSynthesis;
+        const column = td.cellIndex;
+        const tr = td.parentNode;
+        const row = tr.sectionRowIndex;
+        
+        console.log("行row=" + row + " 列column=" + column);
+        console.log(td.textContent);
+        const utterence = new SpeechSynthesisUtterance();
+        
+        console.log(utterence);
+        
+        if (osAndroid) {
+          speakAndroid(td.textContent);
+          
+        } else {
+          var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
+          var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+          speak(selectedOption, td.textContent);
+
+          
+
+        }
+
+      }
+
+    }
+    function speak(voiceName, speakText) {
+      var uttr = new SpeechSynthesisUtterance(speakText);
+
+      
+      if (!voices || !voices.length) {
+        voices = speechSynthesis.getVoices();
+      }
+      voices.forEach(function (v, i) {
+        if (v.name == voiceName) uttr.voice = v;
+      });
+      uttr.rate = speakSpeedRate();  
+      speechSynthesis.cancel();
+      speechSynthesis.speak(uttr);
+    }
+    function speakAndroid(speakText) {
+      var uttr = new SpeechSynthesisUtterance(speakText);
+      uttr.lang = "zh-CN"
+      uttr.rate = speakSpeedRate();  
+      speechSynthesis.cancel();
+      speechSynthesis.speak(uttr);
+    }
+    
+    function iniCSSSet() {
+      var classElement = document.getElementsByClassName('dataContent');
+      for (let i = 1; i < classElement.length; i++) {
+        classElement[i].classList.add("dataNone");
+      }
+      
+    }
+    
+    function speakSpeedRate() {
+      
+      let select = document.querySelector('[name="speechSpeed"]');
+      
+      var rate = parseFloat(select.selectedOptions[0].value);
+      return rate;
+
+    }
+    
+    fetchVoices(drawButtons);
+
+
+    </script>
+  
+
+</body>
+</html>
